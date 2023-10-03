@@ -8,5 +8,6 @@ void main() {
     expect(File(AppPngs.backButton).existsSync(), isTrue);
     expect(File(AppPngs.loginPhoto).existsSync(), isTrue);
     expect(File(AppPngs.logo).existsSync(), isTrue);
+    expect(File(AppPngs.user).existsSync(), isTrue);
   });
 }
