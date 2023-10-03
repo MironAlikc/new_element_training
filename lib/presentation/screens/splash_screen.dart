@@ -1,12 +1,14 @@
 import 'dart:async';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:new_element_training/presentation/screens/login_screen.dart';
 import 'package:new_element_training/presentation/themes/app_colors.dart';
 import 'package:new_element_training/presentation/themes/app_fonts.dart';
 import 'package:new_element_training/resources/resources.dart';
+import 'package:new_element_training/router/router.dart';
 
+@RoutePage()
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -20,11 +22,8 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(
       const Duration(seconds: 2),
-      () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const LoginScreen(),
-        ),
+      () => AutoRouter.of(context).push(
+        LoginRoute(),
       ),
     );
   }

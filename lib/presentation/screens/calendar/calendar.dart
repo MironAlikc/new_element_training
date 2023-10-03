@@ -1,13 +1,20 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:new_element_training/presentation/screens/calendar/table_calendar.dart';
 import 'package:new_element_training/resources/resources.dart';
+import 'package:new_element_training/router/router.dart';
 
-class Calendar extends StatelessWidget {
+@RoutePage()
+class Calendar extends StatefulWidget {
   const Calendar({
     super.key,
   });
 
+  @override
+  State<Calendar> createState() => _CalendarState();
+}
+
+class _CalendarState extends State<Calendar> {
   @override
   Widget build(BuildContext context) {
     final TextEditingController controller = TextEditingController();
@@ -22,12 +29,7 @@ class Calendar extends StatelessWidget {
                 suffixIcon: IconButton(
                   icon: SvgPicture.asset(AppSvgs.calendar),
                   onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const TableCalendarScreen(),
-                      ),
-                    );
+                    AutoRouter.of(context).push(const TableCalendarRoute());
                   },
                 ),
                 hintText: "Search",

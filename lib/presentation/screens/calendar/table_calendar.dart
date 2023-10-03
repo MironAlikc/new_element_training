@@ -1,10 +1,12 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:new_element_training/presentation/common_widgets/custom_button.dart';
-import 'package:new_element_training/presentation/screens/calendar/calendar.dart';
 import 'package:new_element_training/resources/resources.dart';
+import 'package:new_element_training/router/router.dart';
 import 'package:table_calendar/table_calendar.dart';
 
+@RoutePage()
 class TableCalendarScreen extends StatefulWidget {
   const TableCalendarScreen({super.key});
 
@@ -60,14 +62,7 @@ class _TableCalendarScreenState extends State<TableCalendarScreen> {
             AppSvgs.back,
           ),
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const Calendar(),
-              ),
-            );
-
-            ///  Navigator.pop(context);
+            AutoRouter.of(context).pop(const CalendarRoute());
           },
         ),
       ),
