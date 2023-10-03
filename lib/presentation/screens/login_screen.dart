@@ -1,12 +1,14 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:new_element_training/bloc/auth_bloc.dart';
 import 'package:new_element_training/presentation/common_widgets/custom_button.dart';
 import 'package:new_element_training/presentation/common_widgets/custom_text_field.dart';
-import 'package:new_element_training/presentation/screens/home_screen.dart';
 import 'package:new_element_training/presentation/themes/app_fonts.dart';
 import 'package:new_element_training/resources/resources.dart';
+import 'package:new_element_training/router/router.dart';
 
+@RoutePage()
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -62,12 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
             BlocListener<AuthBloc, AuthState>(
               listener: (context, state) {
                 if (state is AuthSucces) {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const HomeScreen(),
-                    ),
-                  );
+                  AutoRouter.of(context).push(const HomeRoute());
                 }
                 if (state is AuthError) {
                   ScaffoldMessenger.of(context).showSnackBar(

@@ -4,18 +4,22 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:new_element_training/bloc/auth_bloc.dart';
 import 'package:new_element_training/core/dio_settings/dio_settings.dart';
 import 'package:new_element_training/data/repositories/auth_repositories.dart';
-import 'package:new_element_training/presentation/screens/home_screen.dart';
-import 'package:new_element_training/presentation/screens/splash_screen.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+import 'package:new_element_training/router/router.dart';
 
 void main() async {
   await ScreenUtil.ensureScreenSize();
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  final _router = AppRouter();
   @override
   Widget build(BuildContext context) {
     return MultiRepositoryProvider(
@@ -52,19 +56,18 @@ class MyApp extends StatelessWidget {
           minTextAdapt: true,
           splitScreenMode: true,
           child: TextFieldUnfocus(
-            child: MaterialApp(
+            child: MaterialApp.router(
               debugShowCheckedModeBanner: false,
               title: "Flutter Demo",
               theme: ThemeData(
                 scaffoldBackgroundColor: Colors.white,
                 // textTheme: GoogleFonts.interTextTheme(),
               ),
-              home: ScreenTypeLayout(
-                mobile: const HomeScreen(),
-                tablet: const SplashScreen(),
-              ),
-
-              //home: const HomeScreen(),
+              routerConfig: _router.config(),
+              // home: ScreenTypeLayout(
+              //   mobile: const HomeScreen(),
+              //   tablet: const SplashScreen(),
+              // ),
             ),
           ),
         ),
