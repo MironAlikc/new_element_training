@@ -18,13 +18,13 @@ abstract class _$AppRouter extends RootStackRouter {
     CalendarRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const Calendar(),
+        child: const CalendarScreen(),
       );
     },
     ContactsRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const Contacts(),
+        child: const ContactsScreen(),
       );
     },
     HomeRoute.name: (routeData) {
@@ -55,6 +55,18 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const TableCalendarScreen(),
+      );
+    },
+    ProgramRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ProgramScreen(),
+      );
+    },
+    CreateProgramRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CreateProgramScreen(),
       );
     },
   };
@@ -154,6 +166,34 @@ class TableCalendarRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'TableCalendarRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ProgramScreen]
+class ProgramRoute extends PageRouteInfo<void> {
+  const ProgramRoute({List<PageRouteInfo>? children})
+      : super(
+          ProgramRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProgramRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CreateProgramScreen]
+class CreateProgramRoute extends PageRouteInfo<void> {
+  const CreateProgramRoute({List<PageRouteInfo>? children})
+      : super(
+          CreateProgramRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CreateProgramRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

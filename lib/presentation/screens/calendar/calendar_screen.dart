@@ -1,21 +1,21 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:new_element_training/presentation/common_widgets/list_user_calendar.dart';
+import 'package:new_element_training/presentation/common_widgets/list_user_calendar_widget.dart';
 import 'package:new_element_training/resources/resources.dart';
 import 'package:new_element_training/router/router.dart';
 
 @RoutePage()
-class Calendar extends StatefulWidget {
-  const Calendar({
+class CalendarScreen extends StatefulWidget {
+  const CalendarScreen({
     super.key,
   });
 
   @override
-  State<Calendar> createState() => _CalendarState();
+  State<CalendarScreen> createState() => _CalendarScreenState();
 }
 
-class _CalendarState extends State<Calendar> {
+class _CalendarScreenState extends State<CalendarScreen> {
   @override
   Widget build(BuildContext context) {
     final TextEditingController controller = TextEditingController();
@@ -64,7 +64,7 @@ class _CalendarState extends State<Calendar> {
               controller: controller,
             ),
             const SizedBox(height: 12),
-            const ListViewUserCalendar(),
+            const ListViewUserCalendarWidget(),
           ],
         ),
       ),

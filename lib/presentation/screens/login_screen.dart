@@ -2,8 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:new_element_training/bloc/auth_bloc.dart';
-import 'package:new_element_training/presentation/common_widgets/custom_button.dart';
-import 'package:new_element_training/presentation/common_widgets/custom_text_field.dart';
+import 'package:new_element_training/presentation/common_widgets/custom_button_widget.dart';
+import 'package:new_element_training/presentation/common_widgets/custom_text_field_widget.dart';
 import 'package:new_element_training/presentation/themes/app_fonts.dart';
 import 'package:new_element_training/resources/resources.dart';
 import 'package:new_element_training/router/router.dart';
@@ -47,14 +47,14 @@ class _LoginScreenState extends State<LoginScreen> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 22),
-            CustomTextField(
+            CustomTextFieldWidget(
               errorText: errorText,
               controller: controlerEmail,
               hintText: "Email or Phone Number",
               onChanged: (val) {},
             ),
             const SizedBox(height: 15),
-            CustomTextField(
+            CustomTextFieldWidget(
               errorText: errorText,
               controller: controlerPassword,
               hintText: "Password",
@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   );
                 }
               },
-              child: CustomButton(
+              child: CustomButtonWidget(
                 onPressed: () {
                   BlocProvider.of<AuthBloc>(context).add(
                     GetTokenEvent(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:new_element_training/resources/resources.dart';
 
-class ListViewUserCalendar extends StatelessWidget {
-  const ListViewUserCalendar({
+class ListViewUserCalendarWidget extends StatelessWidget {
+  const ListViewUserCalendarWidget({
     super.key,
   });
 
