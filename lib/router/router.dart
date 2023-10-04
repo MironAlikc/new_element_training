@@ -6,7 +6,8 @@ import 'package:new_element_training/presentation/screens/calendar/table_calenda
 import 'package:new_element_training/presentation/screens/%D1%81ontacts/contacts_screen.dart';
 import 'package:new_element_training/presentation/screens/home_screen.dart';
 import 'package:new_element_training/presentation/screens/login_screen.dart';
-import 'package:new_element_training/presentation/screens/settings_screen.dart';
+import 'package:new_element_training/presentation/screens/settings/change_Info_screen.dart';
+import 'package:new_element_training/presentation/screens/settings/settings_screen.dart';
 import 'package:new_element_training/presentation/screens/splash_screen.dart';
 
 part "router.gr.dart";
@@ -56,6 +57,10 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: CreateProgramRoute.page,
           path: "/createProgram",
+        ),
+        AutoRoute(
+          page: ChangeInfoRoute.page,
+          path: "/changeInfo",
         ),
       ];
 }

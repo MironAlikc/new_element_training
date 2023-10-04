@@ -6,6 +6,7 @@ import 'package:new_element_training/presentation/common_widgets/tab_bar_trainin
 import 'package:new_element_training/resources/resources.dart';
 import 'package:new_element_training/router/router.dart';
 
+@RoutePage()
 class ProgramScreen extends StatelessWidget {
   const ProgramScreen({super.key});
 
