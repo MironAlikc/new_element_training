@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:new_element_training/resources/resources.dart';
 import 'package:new_element_training/router/router.dart';
 
+@RoutePage()
 class CreateProgramScreen extends StatelessWidget {
   const CreateProgramScreen({super.key});
 
@@ -36,7 +37,12 @@ class CreateProgramScreen extends StatelessWidget {
                 fontWeight: FontWeight.w800,
                 height: 0,
               ),
-            )
+            ),
+            Wrap(
+              children: [
+
+              ],
+            ),
           ],
         ),
       ),

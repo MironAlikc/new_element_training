@@ -42,7 +42,7 @@ abstract class _$AppRouter extends RootStackRouter {
     SettingsRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const Settings(),
+        child: const SettingsScreen(),
       );
     },
     SplashRoute.name: (routeData) {
@@ -67,6 +67,12 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const CreateProgramScreen(),
+      );
+    },
+    ChangeInfoRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ChangeInfoScreen(),
       );
     },
   };
@@ -129,7 +135,7 @@ class LoginRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [Settings]
+/// [SettingsScreen]
 class SettingsRoute extends PageRouteInfo<void> {
   const SettingsRoute({List<PageRouteInfo>? children})
       : super(
@@ -194,6 +200,20 @@ class CreateProgramRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'CreateProgramRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ChangeInfoScreen]
+class ChangeInfoRoute extends PageRouteInfo<void> {
+  const ChangeInfoRoute({List<PageRouteInfo>? children})
+      : super(
+          ChangeInfoRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ChangeInfoRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
