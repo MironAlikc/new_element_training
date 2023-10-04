@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:new_element_training/presentation/themes/app_fonts.dart';
 
-class CustomButton extends StatelessWidget {
-  const CustomButton({
+class CustomButtonWidget extends StatelessWidget {
+  const CustomButtonWidget({
     required this.onPressed,
     required this.title,
     super.key,

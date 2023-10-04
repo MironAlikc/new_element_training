@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:new_element_training/presentation/common_widgets/custom_button.dart';
+import 'package:new_element_training/presentation/common_widgets/custom_button_widget.dart';
 import 'package:new_element_training/resources/resources.dart';
 import 'package:new_element_training/router/router.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -98,7 +98,7 @@ class _TableCalendarScreenState extends State<TableCalendarScreen> {
                   }
                 }),
             //Spacer(),
-            CustomButton(
+            CustomButtonWidget(
               onPressed: () {},
               title: "Show Results",
             ),
