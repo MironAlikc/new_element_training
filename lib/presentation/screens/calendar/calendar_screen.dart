@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:new_element_training/presentation/common_widgets/list_contacts_widget.dart';
 import 'package:new_element_training/presentation/common_widgets/list_user_calendar_widget.dart';
 import 'package:new_element_training/resources/resources.dart';
 import 'package:new_element_training/router/router.dart';
@@ -21,16 +22,26 @@ class _CalendarScreenState extends State<CalendarScreen> {
   Widget build(BuildContext context) {
     final TextEditingController controller = TextEditingController();
     return Scaffold(
-      body: SingleChildScrollView(
+      body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 16.h,
-            vertical: 50.w,
-          ),
-          child: Column(
+          padding: EdgeInsets.symmetric(horizontal: 16.h),
+          child: Stack(
             children: [
+              ListView.builder(
+                padding: EdgeInsets.only(top: 50.h),
+                keyboardDismissBehavior:
+                    ScrollViewKeyboardDismissBehavior.onDrag,
+                shrinkWrap: true,
+                itemCount: 10,
+                itemBuilder: (context, index) => ListViewUserCalendarWidget(
+                  onTap: () {
+                    // AutoRouter.of(context).push(
+                    //   const ProgramRoute(),
+                    // );
+                  },
+                ),
+              ),
               TextField(
-                onChanged: (val) {},
                 decoration: InputDecoration(
                   suffixIcon: IconButton(
                     icon: SvgPicture.asset(AppSvgs.calendar),
@@ -40,39 +51,88 @@ class _CalendarScreenState extends State<CalendarScreen> {
                   ),
                   hintText: "Search",
                   hintStyle: const TextStyle(
-                    color: Color(0XFF5B6975),
+                    color: Color(0xFFA3A3A3),
                     fontSize: 18,
+                    fontFamily: 'Inter',
                     fontWeight: FontWeight.w400,
-                    height: 1.50,
-                    letterSpacing: 0.44,
+                    height: 0,
                   ),
-                  fillColor: const Color(0xFFF2F2F2),
+                  fillColor: const Color(0xFFF2F2F2).withAlpha(235),
                   filled: true,
-                  border: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Colors.grey,
-                    ),
-                    borderRadius: BorderRadius.circular(12.r),
-                  ),
+                  border: const OutlineInputBorder(),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.r),
-                    borderSide:
-                        const BorderSide(color: Colors.white, width: 0.5),
+                    borderRadius: BorderRadius.circular(12.r),
+                    borderSide: const BorderSide(
+                      color: Colors.white,
+                    ),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide:
-                        const BorderSide(color: Colors.white, width: 0.5),
+                    borderRadius: BorderRadius.circular(12.r),
+                    borderSide: const BorderSide(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 controller: controller,
               ),
-              SizedBox(height: 12.h),
-              const ListViewUserCalendarWidget(),
             ],
           ),
         ),
       ),
     );
+    // Scaffold(
+    //   body: SingleChildScrollView(
+    //     child: Padding(
+    //       padding: EdgeInsets.symmetric(
+    //         horizontal: 16.h,
+    //         vertical: 50.w,
+    //       ),
+    //       child: Column(
+    //         children: [
+    //           TextField(
+    //             onChanged: (val) {},
+    //             decoration: InputDecoration(
+    //               suffixIcon: IconButton(
+    //                 icon: SvgPicture.asset(AppSvgs.calendar),
+    //                 onPressed: () {
+    //                   AutoRouter.of(context).push(const TableCalendarRoute());
+    //                 },
+    //               ),
+    //               hintText: "Search",
+    //               hintStyle: const TextStyle(
+    //                 color: Color(0XFF5B6975),
+    //                 fontSize: 18,
+    //                 fontWeight: FontWeight.w400,
+    //                 height: 1.50,
+    //                 letterSpacing: 0.44,
+    //               ),
+    //               fillColor: const Color(0xFFF2F2F2),
+    //               filled: true,
+    //               border: OutlineInputBorder(
+    //                 borderSide: const BorderSide(
+    //                   color: Colors.grey,
+    //                 ),
+    //                 borderRadius: BorderRadius.circular(12.r),
+    //               ),
+    //               enabledBorder: OutlineInputBorder(
+    //                 borderRadius: BorderRadius.circular(10.r),
+    //                 borderSide:
+    //                     const BorderSide(color: Colors.white, width: 0.5),
+    //               ),
+    //               focusedBorder: OutlineInputBorder(
+    //                 borderRadius: BorderRadius.circular(10),
+    //                 borderSide:
+    //                     const BorderSide(color: Colors.white, width: 0.5),
+    //               ),
+    //             ),
+    //             controller: controller,
+    //           ),
+    //           SizedBox(height: 12.h),
+    //           const ListViewUserCalendarWidget(),
+    //         ],
+    //       ),
+    //     ),
+    //   ),
+    // );
   }
 }
