@@ -9,8 +9,8 @@ class TabBarTrainingWidget extends StatefulWidget {
 
 class _TabBarTrainingWidgetState extends State<TabBarTrainingWidget> {
   List<Widget> tabItems = [
-    Text('2222222jjddh'),
-    Text('1111jjddh'),
+    const Text('Program A'),
+    const Text('Program B'),
   ];
   int currentTabIndex = 0;
   @override
@@ -25,8 +25,8 @@ class _TabBarTrainingWidgetState extends State<TabBarTrainingWidget> {
               currentTabIndex = value;
               setState(() {});
             },
-            labelColor: Color(0xFF1E1E1E),
-            unselectedLabelColor: Color(0xFFA3A3A3),
+            labelColor: const Color(0xFF1E1E1E),
+            unselectedLabelColor: const Color(0xFFA3A3A3),
             indicatorColor: Colors.white,
             indicatorSize: TabBarIndicatorSize.tab,
             labelPadding: const EdgeInsets.all(10),
@@ -59,15 +59,7 @@ class _TabBarTrainingWidgetState extends State<TabBarTrainingWidget> {
             isScrollable: true,
           ),
         ),
-        //  const SizedBox(height: 15),
-
         SingleChildScrollView(child: tabItems[currentTabIndex]),
-
-        // ListView(
-        //   children: [
-        //     tabItems[currentTabIndex],
-        //   ],
-        // ),
       ],
     );
   }

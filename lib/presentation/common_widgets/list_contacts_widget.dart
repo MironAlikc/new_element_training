@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:new_element_training/resources/resources.dart';
 
 class ListContactsWidget extends StatelessWidget {
@@ -7,22 +8,22 @@ class ListContactsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 10,
-        horizontal: 5,
+      padding: EdgeInsets.symmetric(
+        vertical: 10.w,
+        horizontal: 5.h,
       ),
       child: Stack(
         children: [
           InkWell(
             onTap: onTap,
             child: Container(
-              width: 390,
-              height: 108,
-              padding: const EdgeInsets.all(20),
+              width: 390.w,
+              height: 108.h,
+              padding: EdgeInsets.all(20.h),
               decoration: ShapeDecoration(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(12.r),
                 ),
                 shadows: const [
                   BoxShadow(
@@ -33,19 +34,19 @@ class ListContactsWidget extends StatelessWidget {
                   )
                 ],
               ),
-              child: const Row(
+              child: Row(
                 children: [
                   CircleAvatar(
-                      radius: 37,
+                      radius: 37.r,
                       backgroundColor: Colors.white,
-                      backgroundImage: AssetImage(
+                      backgroundImage: const AssetImage(
                         AppPngs.user,
                       )),
-                  SizedBox(width: 18),
+                  SizedBox(width: 18.w),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         "Aleksander",
                         style: TextStyle(
                           color: Color(0xFF1E1E1E),
@@ -55,10 +56,10 @@ class ListContactsWidget extends StatelessWidget {
                           height: 0,
                         ),
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 10.h),
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             'Weight 200tb ',
                             textAlign: TextAlign.center,
                             style: TextStyle(
@@ -69,8 +70,8 @@ class ListContactsWidget extends StatelessWidget {
                               height: 0,
                             ),
                           ),
-                          SizedBox(width: 18),
-                          Text(
+                          SizedBox(width: 18.w),
+                          const Text(
                             'Height 6,3',
                             textAlign: TextAlign.center,
                             style: TextStyle(

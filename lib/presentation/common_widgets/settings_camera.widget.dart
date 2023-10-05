@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SettingsCamersWidget extends StatelessWidget {
@@ -12,19 +13,19 @@ class SettingsCamersWidget extends StatelessWidget {
   final String image;
   final String title;
   final Function()? onPressed;
-  
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25),
+      padding: EdgeInsets.symmetric(horizontal: 25.h),
       child: Row(
         children: [
           SvgPicture.asset(
             image,
-            height: 22,
-            width: 22,
+            height: 22.h,
+            width: 22.w,
           ),
-          const SizedBox(width: 30),
+          SizedBox(width: 30.w),
           TextButton(
             onPressed: onPressed,
             child: Text(

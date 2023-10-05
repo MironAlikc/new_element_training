@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:new_element_training/resources/resources.dart';
 import 'package:new_element_training/router/router.dart';
@@ -12,7 +13,7 @@ class CreateProgramScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leadingWidth: 70.0,
+        leadingWidth: 70.h,
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
@@ -39,9 +40,7 @@ class CreateProgramScreen extends StatelessWidget {
               ),
             ),
             Wrap(
-              children: [
-
-              ],
+              children: [],
             ),
           ],
         ),

@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:new_element_training/presentation/common_widgets/list_contacts_widget.dart';
 import 'package:new_element_training/router/router.dart';
 
@@ -20,14 +21,13 @@ class _ContactsScreenState extends State<ContactsScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 16,
-            //vertical: 50,
-          ),
+          padding: EdgeInsets.symmetric(horizontal: 16.h
+              //vertical: 50,
+              ),
           child: Stack(
             children: [
               ListView.builder(
-                padding: const EdgeInsets.only(top: 50),
+                padding: EdgeInsets.only(top: 50.h),
                 keyboardDismissBehavior:
                     ScrollViewKeyboardDismissBehavior.onDrag,
                 shrinkWrap: true,
@@ -40,6 +40,7 @@ class _ContactsScreenState extends State<ContactsScreen> {
                   },
                 ),
               ),
+              //  SizedBox(height: 20),
               TextField(
                 decoration: InputDecoration(
                   hintText: "Search",
@@ -54,13 +55,13 @@ class _ContactsScreenState extends State<ContactsScreen> {
                   filled: true,
                   border: const OutlineInputBorder(),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(12.r),
                     borderSide: const BorderSide(
                       color: Colors.white,
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(12.r),
                     borderSide: const BorderSide(
                       color: Colors.white,
                     ),

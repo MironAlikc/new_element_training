@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:new_element_training/bloc/auth_bloc.dart';
 import 'package:new_element_training/presentation/common_widgets/custom_button_widget.dart';
 import 'package:new_element_training/presentation/common_widgets/custom_text_field_widget.dart';
@@ -40,27 +41,27 @@ class _LoginScreenState extends State<LoginScreen> {
             Image.asset(
               AppPngs.loginPhoto,
             ),
-            const SizedBox(height: 60),
+            SizedBox(height: 60.h),
             const Text(
               "Log In",
               style: AppFonts.w800s28,
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 22),
+            SizedBox(height: 22.h),
             CustomTextFieldWidget(
               errorText: errorText,
               controller: controlerEmail,
               hintText: "Email or Phone Number",
               onChanged: (val) {},
             ),
-            const SizedBox(height: 15),
+            SizedBox(height: 15.h),
             CustomTextFieldWidget(
               errorText: errorText,
               controller: controlerPassword,
               hintText: "Password",
               onChanged: (val) {},
             ),
-            const SizedBox(height: 62),
+            SizedBox(height: 62.h),
             BlocListener<AuthBloc, AuthState>(
               listener: (context, state) {
                 if (state is AuthSucces) {
