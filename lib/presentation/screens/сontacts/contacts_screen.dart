@@ -21,9 +21,7 @@ class _ContactsScreenState extends State<ContactsScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.h
-              //vertical: 50,
-              ),
+          padding: EdgeInsets.symmetric(horizontal: 16.h),
           child: Stack(
             children: [
               ListView.builder(
@@ -40,7 +38,6 @@ class _ContactsScreenState extends State<ContactsScreen> {
                   },
                 ),
               ),
-              //  SizedBox(height: 20),
               TextField(
                 decoration: InputDecoration(
                   hintText: "Search",
