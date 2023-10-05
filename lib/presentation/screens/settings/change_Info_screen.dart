@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:new_element_training/presentation/common_widgets/custom_button_widget.dart';
 import 'package:new_element_training/presentation/common_widgets/custom_text_field_widget.dart';
@@ -15,7 +16,7 @@ class ChangeInfoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leadingWidth: 70.0,
+        leadingWidth: 70.w,
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
@@ -32,49 +33,49 @@ class ChangeInfoScreen extends StatelessWidget {
           children: [
             Stack(
               children: [
-                const CircleAvatar(
-                  radius: 90,
+                CircleAvatar(
+                  radius: 90.r,
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage(
+                  backgroundImage: const AssetImage(
                     AppPngs.user,
                   ),
                 ),
                 Positioned(
-                  right: 10,
+                  right: 10.r,
                   bottom: 0,
                   child: CircleAvatar(
-                    radius: 19,
-                    backgroundColor: Color(0xFFC8CE37),
-                    child: IconButton(
-                      onPressed: () {
-                        showModalBottomSheet(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          context: context,
-                          builder: (context) => Container(
-                            height: 250,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
-                              color: Colors.white,
+                    //radius: 19.r,
+                    backgroundColor: const Color(0xFFC8CE37),
+                    child: Center(
+                      child: IconButton(
+                        onPressed: () {
+                          showModalBottomSheet(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50.r),
                             ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                            context: context,
+                            builder: (context) => Container(
+                              height: 250.h,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30.r),
+                                color: Colors.white,
+                              ),
                               child: Column(
                                 children: [
-                                  const SizedBox(height: 12),
+                                  SizedBox(height: 12.h),
                                   Container(
-                                    width: 50,
-                                    height: 7,
+                                    width: 50.w,
+                                    height: 7.h,
                                     decoration: ShapeDecoration(
                                       color: const Color(0xFFD9D9D9),
                                       shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(6)),
+                                        borderRadius:
+                                            BorderRadius.circular(6.r),
+                                      ),
                                     ),
                                   ),
-                                  const SizedBox(height: 40),
+                                  SizedBox(height: 40.h),
                                   SettingsCamersWidget(
                                     image: AppSvgs.photo,
                                     title: "Select from Gallery",
@@ -93,22 +94,22 @@ class ChangeInfoScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-                          ),
-                        );
-                      },
-                      icon: const Icon(
-                        Icons.camera_alt,
-                        color: Colors.white,
+                          );
+                        },
+                        icon: const Icon(
+                          Icons.camera_alt,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 15),
-            const Padding(
-              padding: EdgeInsets.only(right: 280),
-              child: Text(
+            SizedBox(height: 15.h),
+            Padding(
+              padding: EdgeInsets.only(right: 280.w),
+              child: const Text(
                 'Your Name',
                 style: TextStyle(
                   color: Color(0xFF1E1E1E),
@@ -119,15 +120,15 @@ class ChangeInfoScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
             CustomTextFieldWidget(
               hintText: "Name",
               onChanged: (val) {},
             ),
-            const SizedBox(height: 14),
-            const Padding(
-              padding: EdgeInsets.only(right: 250),
-              child: Text(
+            SizedBox(height: 14.h),
+            Padding(
+              padding: EdgeInsets.only(right: 250.w),
+              child: const Text(
                 'Your Surname',
                 style: TextStyle(
                   color: Color(0xFF1E1E1E),
@@ -138,15 +139,15 @@ class ChangeInfoScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.r),
             CustomTextFieldWidget(
               hintText: "Surname",
               onChanged: (val) {},
             ),
-            const SizedBox(height: 14),
-            const Padding(
-              padding: EdgeInsets.only(right: 250),
-              child: Text(
+            SizedBox(height: 14.h),
+            Padding(
+              padding: EdgeInsets.only(right: 250.w),
+              child: const Text(
                 'Phone number',
                 style: TextStyle(
                   color: Color(0xFF1E1E1E),
@@ -157,15 +158,15 @@ class ChangeInfoScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
             CustomTextFieldWidget(
               hintText: "+ 123 456 78 89",
               onChanged: (val) {},
             ),
-            const SizedBox(height: 14),
-            const Padding(
-              padding: EdgeInsets.only(right: 330),
-              child: Text(
+            SizedBox(height: 14.h),
+            Padding(
+              padding: EdgeInsets.only(right: 330.w),
+              child: const Text(
                 'Email',
                 style: TextStyle(
                   color: Color(0xFF1E1E1E),
@@ -176,15 +177,15 @@ class ChangeInfoScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
             CustomTextFieldWidget(
               hintText: "Email",
               onChanged: (val) {},
             ),
-            const SizedBox(height: 14),
-            const Padding(
-              padding: EdgeInsets.only(right: 320),
-              child: Text(
+            SizedBox(height: 14.h),
+            Padding(
+              padding: EdgeInsets.only(right: 320.w),
+              child: const Text(
                 'Notes',
                 style: TextStyle(
                   color: Color(0xFF1E1E1E),
@@ -195,12 +196,12 @@ class ChangeInfoScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
             CustomTextFieldWidget(
               hintText: "Notes",
               onChanged: (val) {},
             ),
-            const SizedBox(height: 15),
+            SizedBox(height: 15.h),
             CustomButtonWidget(
               onPressed: () {
                 AutoRouter.of(context).push(

@@ -5,6 +5,7 @@ import 'package:new_element_training/bloc/auth_bloc.dart';
 import 'package:new_element_training/core/dio_settings/dio_settings.dart';
 import 'package:new_element_training/data/repositories/auth_repositories.dart';
 import 'package:new_element_training/router/router.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 void main() async {
   await ScreenUtil.ensureScreenSize();
@@ -51,23 +52,37 @@ class _MyAppState extends State<MyApp> {
           //   ),
           // ),
         ],
-        child: ScreenUtilInit(
-          designSize: const Size(430, 932),
-          minTextAdapt: true,
-          splitScreenMode: true,
-          child: TextFieldUnfocus(
-            child: MaterialApp.router(
-              debugShowCheckedModeBanner: false,
-              title: "Flutter Demo",
-              theme: ThemeData(
-                scaffoldBackgroundColor: Colors.white,
-                // textTheme: GoogleFonts.interTextTheme(),
+        child: ScreenTypeLayout(
+          mobile: ScreenUtilInit(
+            designSize: const Size(430, 932),
+            minTextAdapt: true,
+            splitScreenMode: true,
+            child: TextFieldUnfocus(
+              child: MaterialApp.router(
+                debugShowCheckedModeBanner: false,
+                title: "Flutter Demo",
+                theme: ThemeData(
+                  scaffoldBackgroundColor: Colors.white,
+                  // textTheme: GoogleFonts.interTextTheme(),
+                ),
+                routerConfig: _router.config(),
               ),
-              routerConfig: _router.config(),
-              // home: ScreenTypeLayout(
-              //   mobile: const HomeScreen(),
-              //   tablet: const SplashScreen(),
-              // ),
+            ),
+          ),
+          tablet: ScreenUtilInit(
+            designSize: const Size(1024, 1366),
+            minTextAdapt: true,
+            splitScreenMode: true,
+            child: TextFieldUnfocus(
+              child: MaterialApp.router(
+                debugShowCheckedModeBanner: false,
+                title: "Flutter Demo",
+                theme: ThemeData(
+                  scaffoldBackgroundColor: Colors.white,
+                  // textTheme: GoogleFonts.interTextTheme(),
+                ),
+                routerConfig: _router.config(),
+              ),
             ),
           ),
         ),
