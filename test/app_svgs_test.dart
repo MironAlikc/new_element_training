@@ -8,8 +8,11 @@ void main() {
     expect(File(AppSvgs.back).existsSync(), isTrue);
     expect(File(AppSvgs.backArrow).existsSync(), isTrue);
     expect(File(AppSvgs.calendar).existsSync(), isTrue);
+    expect(File(AppSvgs.camera).existsSync(), isTrue);
     expect(File(AppSvgs.contacts).existsSync(), isTrue);
+    expect(File(AppSvgs.delete).existsSync(), isTrue);
     expect(File(AppSvgs.logo).existsSync(), isTrue);
+    expect(File(AppSvgs.photo).existsSync(), isTrue);
     expect(File(AppSvgs.settings).existsSync(), isTrue);
     expect(File(AppSvgs.user).existsSync(), isTrue);
   });
