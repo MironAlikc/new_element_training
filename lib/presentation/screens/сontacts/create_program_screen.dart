@@ -2,13 +2,54 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:new_element_training/presentation/common_widgets/custom_button_widget.dart';
 import 'package:new_element_training/resources/resources.dart';
 import 'package:new_element_training/router/router.dart';
 
 @RoutePage()
-class CreateProgramScreen extends StatelessWidget {
+class CreateProgramScreen extends StatefulWidget {
   const CreateProgramScreen({super.key});
 
+  @override
+  State<CreateProgramScreen> createState() => _CreateProgramScreenState();
+}
+
+class _CreateProgramScreenState extends State<CreateProgramScreen> {
+  List<String> letters = [
+    'A1',
+    'A2',
+    'A3',
+    'A4',
+    'B1',
+    'B5',
+    'B6',
+    'B8',
+    'C1',
+    'C3',
+    'C5',
+    'C7',
+    'D5',
+    'D6',
+    'D7',
+    'E1',
+    'E1',
+    'E2',
+    'E4',
+    'E5',
+    'F1',
+    'F2',
+    'F3',
+    'G1',
+    'G3',
+    'H1',
+    'H2',
+    'J1',
+    'J2',
+    'J3',
+    'J4',
+    'J5',
+  ];
+  List<String> selectedLetters = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,10 +66,10 @@ class CreateProgramScreen extends StatelessWidget {
           },
         ),
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           children: [
-            Text(
+            const Text(
               'Select training \nmachienes for Program A',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -39,8 +80,58 @@ class CreateProgramScreen extends StatelessWidget {
                 height: 0,
               ),
             ),
+            SizedBox(height: 20),
             Wrap(
-              children: [],
+              spacing: 40.0,
+              runSpacing: 20.0,
+              children: [
+                for (var letter in letters)
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        if (selectedLetters.contains(letter)) {
+                          selectedLetters.remove(letter);
+                        } else {
+                          selectedLetters.add(letter);
+                        }
+                      });
+                    },
+                    child: Container(
+                      width: 65.0,
+                      height: 55.0,
+                      decoration: BoxDecoration(
+                        color: selectedLetters.contains(letter)
+                            ? const Color(0xFFC8CE37)
+                            : null,
+                        //border: Border.all(),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Center(
+                        child: Text(
+                          letter,
+                          style: TextStyle(
+                            color: selectedLetters.contains(letter)
+                                ? Colors.white
+                                : const Color(0xFFA3A3A3),
+                            fontSize: 40,
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w500,
+                            height: 0,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+            const SizedBox(height: 60),
+            CustomButtonWidget(
+              onPressed: () {
+                AutoRouter.of(context).push(
+                  const SelectTrainingRoute(),
+                );
+              },
+              title: 'Next',
             ),
           ],
         ),
