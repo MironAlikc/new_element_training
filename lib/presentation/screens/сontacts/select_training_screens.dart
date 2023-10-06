@@ -7,10 +7,14 @@ import 'package:new_element_training/router/router.dart';
 
 @RoutePage()
 class SelectTrainingScreen extends StatelessWidget {
-  const SelectTrainingScreen({super.key});
+  const SelectTrainingScreen({
+    required this.selectedTrainers,
+  });
+  final List<String> selectedTrainers;
 
   @override
   Widget build(BuildContext context) {
+    print(selectedTrainers);
     return Scaffold(
       appBar: AppBar(
         leadingWidth: 70.h,
@@ -40,22 +44,44 @@ class SelectTrainingScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const Center(
-          child: Column(
-        children: [
-          Text(
-            'Program A',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Color(0xFF1E1E1E),
-              fontSize: 24,
-              fontFamily: 'Inter',
-              fontWeight: FontWeight.w800,
-              height: 0,
+      body: Center(
+        child: Column(
+          children: [
+            const Text(
+              "Program A",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color(0xFF1E1E1E),
+                fontSize: 24,
+                fontFamily: 'Inter',
+                fontWeight: FontWeight.w800,
+                height: 0,
+              ),
             ),
-          )
-        ],
-      )),
+            SizedBox(
+              height: 500,
+              width: 500,
+              child: ListView.builder(
+                itemCount: selectedTrainers.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text(
+                      selectedTrainers[index],
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 40,
+                        fontFamily: "Inter",
+                        fontWeight: FontWeight.w500,
+                        height: 0,
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
