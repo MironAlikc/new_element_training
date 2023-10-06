@@ -1,10 +1,10 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:new_element_training/presentation/common_widgets/custom_button_widget.dart';
-import 'package:new_element_training/resources/resources.dart';
-import 'package:new_element_training/router/router.dart';
+import "package:auto_route/auto_route.dart";
+import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
+import "package:flutter_svg/svg.dart";
+import "package:new_element_training/presentation/common_widgets/custom_button_widget.dart";
+import "package:new_element_training/resources/resources.dart";
+import "package:new_element_training/router/router.dart";
 
 @RoutePage()
 class CreateProgramScreen extends StatefulWidget {
@@ -16,10 +16,10 @@ class CreateProgramScreen extends StatefulWidget {
 
 class _CreateProgramScreenState extends State<CreateProgramScreen> {
   List<String> letters = [
-    'A1',
-    'A2',
-    'A3',
-    'A4',
+    "A1",
+    "A2",
+    "A3",
+    "A4",
     'B1',
     'B5',
     'B6',
@@ -32,8 +32,8 @@ class _CreateProgramScreenState extends State<CreateProgramScreen> {
     'D6',
     'D7',
     'E1',
-    'E1',
     'E2',
+    'E3',
     'E4',
     'E5',
     'F1',
@@ -70,41 +70,41 @@ class _CreateProgramScreenState extends State<CreateProgramScreen> {
         child: Column(
           children: [
             const Text(
-              'Select training \nmachienes for Program A',
+              "Select training \nmachienes for Program A",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Color(0xFF1E1E1E),
                 fontSize: 24,
-                fontFamily: 'Inter',
+                fontFamily: "Inter",
                 fontWeight: FontWeight.w800,
                 height: 0,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Wrap(
-              spacing: 40.0,
-              runSpacing: 20.0,
+              spacing: 40,
+              runSpacing: 20,
               children: [
-                for (var letter in letters)
+                for (final letter in letters)
                   InkWell(
                     onTap: () {
                       setState(() {
                         if (selectedLetters.contains(letter)) {
-                          selectedLetters.remove(letter);
+                           selectedLetters.remove(letter);
                         } else {
                           selectedLetters.add(letter);
                         }
                       });
                     },
                     child: Container(
-                      width: 65.0,
-                      height: 55.0,
+                      width: 65,
+                      height: 55,
                       decoration: BoxDecoration(
                         color: selectedLetters.contains(letter)
                             ? const Color(0xFFC8CE37)
                             : null,
                         //border: Border.all(),
-                        borderRadius: BorderRadius.circular(8.0),
+                        borderRadius: BorderRadius.circular(8),
                       ),
                       child: Center(
                         child: Text(
@@ -114,7 +114,7 @@ class _CreateProgramScreenState extends State<CreateProgramScreen> {
                                 ? Colors.white
                                 : const Color(0xFFA3A3A3),
                             fontSize: 40,
-                            fontFamily: 'Inter',
+                            fontFamily: "Inter",
                             fontWeight: FontWeight.w500,
                             height: 0,
                           ),
@@ -128,10 +128,10 @@ class _CreateProgramScreenState extends State<CreateProgramScreen> {
             CustomButtonWidget(
               onPressed: () {
                 AutoRouter.of(context).push(
-                  const SelectTrainingRoute(),
+                  SelectTrainingRoute(selectedTrainers: selectedLetters),
                 );
               },
-              title: 'Next',
+              title: "Next",
             ),
           ],
         ),

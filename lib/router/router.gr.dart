@@ -21,10 +21,22 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const CalendarScreen(),
       );
     },
+    ChangeInfoRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ChangeInfoScreen(),
+      );
+    },
     ContactsRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const ContactsScreen(),
+      );
+    },
+    CreateProgramRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CreateProgramScreen(),
       );
     },
     HomeRoute.name: (routeData) {
@@ -37,6 +49,19 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const LoginScreen(),
+      );
+    },
+    ProgramRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ProgramScreen(),
+      );
+    },
+    SelectTrainingRoute.name: (routeData) {
+      final args = routeData.argsAs<SelectTrainingRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: SelectTrainingScreen(selectedTrainers: args.selectedTrainers),
       );
     },
     SettingsRoute.name: (routeData) {
@@ -57,35 +82,11 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const TableCalendarScreen(),
       );
     },
-    ProgramRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const ProgramScreen(),
-      );
-    },
-    CreateProgramRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const CreateProgramScreen(),
-      );
-    },
-    ChangeInfoRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const ChangeInfoScreen(),
-      );
-    },
-    SelectTrainingRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const SelectTrainingScreen(),
-      );
-    },
   };
 }
 
 /// generated route for
-/// [CalendarRoute]
+/// [CalendarScreen]
 class CalendarRoute extends PageRouteInfo<void> {
   const CalendarRoute({List<PageRouteInfo>? children})
       : super(
@@ -93,13 +94,27 @@ class CalendarRoute extends PageRouteInfo<void> {
           initialChildren: children,
         );
 
-  static const String name = 'Calendar';
+  static const String name = 'CalendarRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
-/// [ContactsRoute]
+/// [ChangeInfoScreen]
+class ChangeInfoRoute extends PageRouteInfo<void> {
+  const ChangeInfoRoute({List<PageRouteInfo>? children})
+      : super(
+          ChangeInfoRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ChangeInfoRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ContactsScreen]
 class ContactsRoute extends PageRouteInfo<void> {
   const ContactsRoute({List<PageRouteInfo>? children})
       : super(
@@ -107,7 +122,21 @@ class ContactsRoute extends PageRouteInfo<void> {
           initialChildren: children,
         );
 
-  static const String name = 'Contacts';
+  static const String name = 'ContactsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CreateProgramScreen]
+class CreateProgramRoute extends PageRouteInfo<void> {
+  const CreateProgramRoute({List<PageRouteInfo>? children})
+      : super(
+          CreateProgramRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CreateProgramRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -141,6 +170,49 @@ class LoginRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [ProgramScreen]
+class ProgramRoute extends PageRouteInfo<void> {
+  const ProgramRoute({List<PageRouteInfo>? children})
+      : super(
+          ProgramRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProgramRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SelectTrainingScreen]
+class SelectTrainingRoute extends PageRouteInfo<SelectTrainingRouteArgs> {
+  SelectTrainingRoute({
+    required List<String> selectedTrainers,
+    List<PageRouteInfo>? children,
+  }) : super(
+          SelectTrainingRoute.name,
+          args: SelectTrainingRouteArgs(selectedTrainers: selectedTrainers),
+          initialChildren: children,
+        );
+
+  static const String name = 'SelectTrainingRoute';
+
+  static const PageInfo<SelectTrainingRouteArgs> page =
+      PageInfo<SelectTrainingRouteArgs>(name);
+}
+
+class SelectTrainingRouteArgs {
+  const SelectTrainingRouteArgs({required this.selectedTrainers});
+
+  final List<String> selectedTrainers;
+
+  @override
+  String toString() {
+    return 'SelectTrainingRouteArgs{selectedTrainers: $selectedTrainers}';
+  }
+}
+
+/// generated route for
 /// [SettingsScreen]
 class SettingsRoute extends PageRouteInfo<void> {
   const SettingsRoute({List<PageRouteInfo>? children})
@@ -149,7 +221,7 @@ class SettingsRoute extends PageRouteInfo<void> {
           initialChildren: children,
         );
 
-  static const String name = 'Settings';
+  static const String name = 'SettingsRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -178,62 +250,6 @@ class TableCalendarRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'TableCalendarRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [ProgramScreen]
-class ProgramRoute extends PageRouteInfo<void> {
-  const ProgramRoute({List<PageRouteInfo>? children})
-      : super(
-          ProgramRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'ProgramRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [CreateProgramScreen]
-class CreateProgramRoute extends PageRouteInfo<void> {
-  const CreateProgramRoute({List<PageRouteInfo>? children})
-      : super(
-          CreateProgramRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'CreateProgramRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [ChangeInfoScreen]
-class ChangeInfoRoute extends PageRouteInfo<void> {
-  const ChangeInfoRoute({List<PageRouteInfo>? children})
-      : super(
-          ChangeInfoRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'ChangeInfoRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [SelectTrainingScreen]
-class SelectTrainingRoute extends PageRouteInfo<void> {
-  const SelectTrainingRoute({List<PageRouteInfo>? children})
-      : super(
-          SelectTrainingRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'SelectTrainingRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -1,11 +1,11 @@
-import 'package:dio/dio.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:new_element_training/data/models/error_model.dart';
-import 'package:new_element_training/data/models/token_model.dart';
-import 'package:new_element_training/data/repositories/auth_repositories.dart';
+import "package:dio/dio.dart";
+import "package:flutter_bloc/flutter_bloc.dart";
+import "package:new_element_training/data/models/error_model.dart";
+import "package:new_element_training/data/models/token_model.dart";
+import "package:new_element_training/data/repositories/auth_repositories.dart";
 
-part 'auth_event.dart';
-part 'auth_state.dart';
+part "auth_event.dart";
+part "auth_state.dart";
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   AuthBloc({required this.repo}) : super(AuthInitial()) {
