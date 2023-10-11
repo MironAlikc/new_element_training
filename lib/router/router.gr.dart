@@ -82,6 +82,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const TableCalendarScreen(),
       );
     },
+    SettingsProgramRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const SettingsProgramScreen(),
+      );
+    },
   };
 }
 
@@ -250,6 +256,20 @@ class TableCalendarRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'TableCalendarRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SettingsProgramScreen]
+class SettingsProgramRoute extends PageRouteInfo<void> {
+  const SettingsProgramRoute({List<PageRouteInfo>? children})
+      : super(
+          SettingsProgramRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SettingsProgramRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
