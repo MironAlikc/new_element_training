@@ -58,15 +58,24 @@ class SelectTrainingScreen extends StatelessWidget {
                 height: 0,
               ),
             ),
-            SizedBox(
-              height: 500,
-              width: 500,
-              child: ListView.builder(
-                itemCount: selectedTrainers.length,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(
-                      selectedTrainers[index],
+            const SizedBox(height: 20),
+            Wrap(
+              crossAxisAlignment: WrapCrossAlignment.center,
+              alignment: WrapAlignment.center,
+              spacing: 10,
+              runSpacing: 5,
+              children: selectedTrainers.map((trainer) {
+                return GestureDetector(
+                  onTap: () {
+                    AutoRouter.of(context).push(
+                      const SettingsProgramRoute(),
+                    );
+                  },
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    child: Text(
+                      trainer,
                       style: const TextStyle(
                         color: Colors.black,
                         fontSize: 40,
@@ -75,9 +84,9 @@ class SelectTrainingScreen extends StatelessWidget {
                         height: 0,
                       ),
                     ),
-                  );
-                },
-              ),
+                  ),
+                );
+              }).toList(),
             ),
           ],
         ),

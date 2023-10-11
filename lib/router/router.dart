@@ -9,6 +9,7 @@ import "package:new_element_training/presentation/screens/home_screen.dart";
 import "package:new_element_training/presentation/screens/login_screen.dart";
 import "package:new_element_training/presentation/screens/settings/change_Info_screen.dart";
 import "package:new_element_training/presentation/screens/settings/settings_screen.dart";
+import "package:new_element_training/presentation/screens/settings_program/settings_program_screen.dart";
 import "package:new_element_training/presentation/screens/splash_screen.dart";
 
 part "router.gr.dart";
@@ -66,7 +67,10 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: SelectTrainingRoute.page,
           path: "/selectTraining",
-          
+        ),
+        AutoRoute(
+          page: SettingsProgramRoute.page,
+          path: "/SettingsProgram",
         ),
       ];
 }
