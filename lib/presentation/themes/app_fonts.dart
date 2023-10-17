@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 
 abstract class AppFonts {
   static const TextStyle w800s28 = TextStyle(
@@ -26,5 +26,23 @@ abstract class AppFonts {
     fontSize: 18,
     fontFamily: "Helvetica",
     fontWeight: FontWeight.w400,
+  );
+  static const TextStyle w800s62 = TextStyle(
+    color: Colors.black,
+    fontSize: 62,
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w800,
+  );
+  static const TextStyle w600s55 = TextStyle(
+    color: Colors.black,
+    fontSize: 55,
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w600,
+  );
+  static const TextStyle w800s40 = TextStyle(
+    color: Color(0xFF1E1E1E),
+    fontSize: 40,
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w800,
   );
 }

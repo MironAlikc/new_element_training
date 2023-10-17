@@ -1,8 +1,8 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:new_element_training/presentation/common_widgets/list_contacts_widget.dart';
-import 'package:new_element_training/router/router.dart';
+import "package:auto_route/auto_route.dart";
+import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
+import "package:new_element_training/presentation/common_widgets/list_contacts_widget.dart";
+import "package:new_element_training/router/router.dart";
 
 @RoutePage()
 class ContactsScreen extends StatefulWidget {
@@ -44,7 +44,7 @@ class _ContactsScreenState extends State<ContactsScreen> {
                   hintStyle: const TextStyle(
                     color: Color(0xFFA3A3A3),
                     fontSize: 18,
-                    fontFamily: 'Inter',
+                    fontFamily: "Inter",
                     fontWeight: FontWeight.w400,
                     height: 0,
                   ),

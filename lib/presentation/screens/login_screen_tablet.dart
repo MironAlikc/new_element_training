@@ -7,30 +7,19 @@ import "package:new_element_training/presentation/common_widgets/custom_button_w
 import "package:new_element_training/presentation/common_widgets/custom_text_field_widget.dart";
 import "package:new_element_training/presentation/themes/app_fonts.dart";
 import "package:new_element_training/resources/resources.dart";
-import "package:new_element_training/router/router.dart";
 
 @RoutePage()
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class LoginScreenTablet extends StatefulWidget {
+  const LoginScreenTablet({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<LoginScreenTablet> createState() => _LoginScreenTabletState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginScreenTabletState extends State<LoginScreenTablet> {
   final TextEditingController controlerEmail = TextEditingController();
   final TextEditingController controlerPassword = TextEditingController();
   String? errorText;
-  // late SharedPreferences prefs;
-  // initPrefs() {
-  //   prefs = SharedPreferences.getInstance() as SharedPreferences;
-  // }
-
-  // @override
-  // initState() {
-  //   initPrefs();
-  //   super.initState();
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -39,12 +28,12 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           children: [
             Image.asset(
-              AppPngs.loginPhoto,
+              AppPngs.loginPhotoTable,
             ),
             SizedBox(height: 60.h),
             const Text(
               "Log In",
-              style: AppFonts.w800s28,
+              style: AppFonts.w800s40,
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 22.h),
@@ -61,12 +50,12 @@ class _LoginScreenState extends State<LoginScreen> {
               hintText: "Password",
               onChanged: (val) {},
             ),
-            SizedBox(height: 62.h),
+            SizedBox(height: 112.h),
             BlocListener<AuthBloc, AuthState>(
               listener: (context, state) {
-                if (state is AuthSucces) {
-                  AutoRouter.of(context).push(const HomeRoute());
-                }
+                // if (state is AuthSucces) {
+                //   AutoRouter.of(context).push(const HomeRoute());
+                // }
                 if (state is AuthError) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(

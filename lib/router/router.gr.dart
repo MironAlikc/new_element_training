@@ -88,6 +88,18 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const SettingsProgramScreen(),
       );
     },
+    SplashScreenTabletRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const SplashScreenTablet(),
+      );
+    },
+    LoginScreenTabletRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const LoginScreenTablet(),
+      );
+    },
   };
 }
 
@@ -270,6 +282,34 @@ class SettingsProgramRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'SettingsProgramRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SplashScreenTablet]
+class SplashScreenTabletRoute extends PageRouteInfo<void> {
+  const SplashScreenTabletRoute({List<PageRouteInfo>? children})
+      : super(
+          SplashScreenTabletRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SplashScreenTabletRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [LoginScreenTablet]
+class LoginScreenTabletRoute extends PageRouteInfo<void> {
+  const LoginScreenTabletRoute({List<PageRouteInfo>? children})
+      : super(
+          LoginScreenTabletRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'LoginScreenTabletRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

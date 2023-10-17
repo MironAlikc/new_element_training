@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:new_element_training/bloc/auth_bloc.dart';
-import 'package:new_element_training/core/dio_settings/dio_settings.dart';
-import 'package:new_element_training/data/repositories/auth_repositories.dart';
-import 'package:new_element_training/router/router.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+import "package:flutter/material.dart";
+import "package:flutter_bloc/flutter_bloc.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
+import "package:new_element_training/bloc/auth_bloc.dart";
+import "package:new_element_training/core/dio_settings/dio_settings.dart";
+import "package:new_element_training/data/repositories/auth_repositories.dart";
+import "package:new_element_training/router/router.dart";
+import "package:responsive_builder/responsive_builder.dart";
 
 void main() async {
   await ScreenUtil.ensureScreenSize();
@@ -33,11 +33,6 @@ class _MyAppState extends State<MyApp> {
             dio: RepositoryProvider.of<DioSettings>(context).dio,
           ),
         ),
-        // RepositoryProvider(
-        //   create: (context) => AuthBloc(
-        //     dio: RepositoryProvider.of<DioSettings>(context).dio,
-        //   ),
-        // ),
       ],
       child: MultiBlocProvider(
         providers: [
@@ -46,14 +41,9 @@ class _MyAppState extends State<MyApp> {
               repo: RepositoryProvider.of<AuthRepositories>(context),
             ),
           ),
-          // BlocProvider(
-          //   create: (context) => ForgotPasswordBloc(
-          //     repo: RepositoryProvider.of<ForgotPasswordRepo>(context),
-          //   ),
-          // ),
         ],
-        child: ScreenTypeLayout(
-          mobile: ScreenUtilInit(
+        child: ScreenTypeLayout.builder(
+          mobile: (BuildContext context) => ScreenUtilInit(
             designSize: const Size(430, 932),
             minTextAdapt: true,
             splitScreenMode: true,
@@ -69,7 +59,7 @@ class _MyAppState extends State<MyApp> {
               ),
             ),
           ),
-          tablet: ScreenUtilInit(
+          tablet: (BuildContext context) => ScreenUtilInit(
             designSize: const Size(1024, 1366),
             minTextAdapt: true,
             splitScreenMode: true,

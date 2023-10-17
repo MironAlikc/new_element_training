@@ -1,11 +1,11 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:new_element_training/presentation/common_widgets/custom_button_widget.dart';
-import 'package:new_element_training/presentation/common_widgets/tab_bar_training_widget.dart';
-import 'package:new_element_training/resources/resources.dart';
-import 'package:new_element_training/router/router.dart';
+import "package:auto_route/auto_route.dart";
+import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
+import "package:flutter_svg/svg.dart";
+import "package:new_element_training/presentation/common_widgets/custom_button_widget.dart";
+import "package:new_element_training/presentation/common_widgets/tab_bar_training_widget.dart";
+import "package:new_element_training/resources/resources.dart";
+import "package:new_element_training/router/router.dart";
 
 @RoutePage()
 class ProgramScreen extends StatelessWidget {
@@ -54,19 +54,18 @@ class ProgramScreen extends StatelessWidget {
                         color: Color(0x26000000),
                         blurRadius: 4,
                         offset: Offset(0, 4),
-                        spreadRadius: 0,
-                      )
+                      ),
                     ],
                   ),
                   child: Column(
                     children: [
                       const Text(
-                        'Andrew Brown',
+                        "Andrew Brown",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFF1E1E1E),
                           fontSize: 30,
-                          fontFamily: 'Inter',
+                          fontFamily: "Inter",
                           fontWeight: FontWeight.w800,
                         ),
                       ),
@@ -75,21 +74,21 @@ class ProgramScreen extends StatelessWidget {
                         TextSpan(
                           children: [
                             TextSpan(
-                              text: 'Phone number  ',
+                              text: "Phone number  ",
                               style: TextStyle(
                                 color: Color(0xFFA3A3A3),
                                 fontSize: 18,
-                                fontFamily: 'Inter',
+                                fontFamily: "Inter",
                                 fontWeight: FontWeight.w400,
                                 height: 0,
                               ),
                             ),
                             TextSpan(
-                              text: '+123 456 789 9192 ',
+                              text: "+123 456 789 9192 ",
                               style: TextStyle(
                                 color: Color(0xFF1E1E1E),
                                 fontSize: 18,
-                                fontFamily: 'Inter',
+                                fontFamily: "Inter",
                                 fontWeight: FontWeight.w700,
                                 height: 0,
                               ),
@@ -103,61 +102,61 @@ class ProgramScreen extends StatelessWidget {
                         TextSpan(
                           children: [
                             TextSpan(
-                              text: 'Age  ',
+                              text: "Age  ",
                               style: TextStyle(
                                 color: Color(0xFFA3A3A3),
                                 fontSize: 18,
-                                fontFamily: 'Inter',
+                                fontFamily: "Inter",
                                 fontWeight: FontWeight.w400,
                                 height: 0,
                               ),
                             ),
                             TextSpan(
-                              text: '32 y  ',
+                              text: "32 y  ",
                               style: TextStyle(
                                 color: Color(0xFF1E1E1E),
                                 fontSize: 18,
-                                fontFamily: 'Inter',
+                                fontFamily: "Inter",
                                 fontWeight: FontWeight.w700,
                                 height: 0,
                               ),
                             ),
                             TextSpan(
-                              text: 'Weight  ',
+                              text: "Weight  ",
                               style: TextStyle(
                                 color: Color(0xFFA3A3A3),
                                 fontSize: 18,
-                                fontFamily: 'Inter',
+                                fontFamily: "Inter",
                                 fontWeight: FontWeight.w400,
                                 height: 0,
                               ),
                             ),
                             TextSpan(
-                              text: '200tb  ',
+                              text: "200tb  ",
                               style: TextStyle(
                                 color: Color(0xFF1E1E1E),
                                 fontSize: 18,
-                                fontFamily: 'Inter',
+                                fontFamily: "Inter",
                                 fontWeight: FontWeight.w700,
                                 height: 0,
                               ),
                             ),
                             TextSpan(
-                              text: 'Height  ',
+                              text: "Height  ",
                               style: TextStyle(
                                 color: Color(0xFFA3A3A3),
                                 fontSize: 18,
-                                fontFamily: 'Inter',
+                                fontFamily: "Inter",
                                 fontWeight: FontWeight.w400,
                                 height: 0,
                               ),
                             ),
                             TextSpan(
-                              text: '6,3',
+                              text: "6,3",
                               style: TextStyle(
                                 color: Color(0xFF1E1E1E),
                                 fontSize: 18,
-                                fontFamily: 'Inter',
+                                fontFamily: "Inter",
                                 fontWeight: FontWeight.w400,
                                 height: 0,
                               ),
@@ -168,12 +167,12 @@ class ProgramScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 10.h),
                       const Text(
-                        'Some notes about Andrew',
+                        "Some notes about Andrew",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFFA3A3A3),
                           fontSize: 18,
-                          fontFamily: 'Inter',
+                          fontFamily: "Inter",
                           fontWeight: FontWeight.w400,
                           height: 0,
                         ),
@@ -189,7 +188,7 @@ class ProgramScreen extends StatelessWidget {
                     const CreateProgramRoute(),
                   );
                 },
-                title: 'Create New Program',
+                title: "Create New Program",
               ),
               const TabBarTrainingWidget(),
             ],

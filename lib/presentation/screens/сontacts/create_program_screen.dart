@@ -20,34 +20,34 @@ class _CreateProgramScreenState extends State<CreateProgramScreen> {
     "A2",
     "A3",
     "A4",
-    'B1',
-    'B5',
-    'B6',
-    'B8',
-    'C1',
-    'C3',
-    'C5',
-    'C7',
-    'D5',
-    'D6',
-    'D7',
-    'E1',
-    'E2',
-    'E3',
-    'E4',
-    'E5',
-    'F1',
-    'F2',
-    'F3',
-    'G1',
-    'G3',
-    'H1',
-    'H2',
-    'J1',
-    'J2',
-    'J3',
-    'J4',
-    'J5',
+    "B1",
+    "B5",
+    "B6",
+    "B8",
+    "C1",
+    "C3",
+    "C5",
+    "C7",
+    "D5",
+    "D6",
+    "D7",
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "F1",
+    "F2",
+    "F3",
+    "G1",
+    "G3",
+    "H1",
+    "H2",
+    "J1",
+    "J2",
+    "J3",
+    "J4",
+    "J5",
   ];
   List<String> selectedLetters = [];
   @override
@@ -81,7 +81,7 @@ class _CreateProgramScreenState extends State<CreateProgramScreen> {
               ),
             ),
             const SizedBox(height: 20),
-            Wrap( 
+            Wrap(
               spacing: 40,
               runSpacing: 20,
               children: [
@@ -90,7 +90,7 @@ class _CreateProgramScreenState extends State<CreateProgramScreen> {
                     onTap: () {
                       setState(() {
                         if (selectedLetters.contains(letter)) {
-                           selectedLetters.remove(letter);
+                          selectedLetters.remove(letter);
                         } else {
                           selectedLetters.add(letter);
                         }
@@ -124,7 +124,6 @@ class _CreateProgramScreenState extends State<CreateProgramScreen> {
                   ),
               ],
             ),
-            const SizedBox(height: 60),
             CustomButtonWidget(
               onPressed: () {
                 AutoRouter.of(context).push(
