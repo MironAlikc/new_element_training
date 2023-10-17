@@ -9,21 +9,21 @@ import "package:new_element_training/resources/resources.dart";
 import "package:new_element_training/router/router.dart";
 
 @RoutePage()
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+class SplashScreenTablet extends StatefulWidget {
+  const SplashScreenTablet({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  State<SplashScreenTablet> createState() => _SplashScreenTabletState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenTabletState extends State<SplashScreenTablet> {
   @override
   void initState() {
     super.initState();
     Timer(
       const Duration(seconds: 2),
       () => AutoRouter.of(context).push(
-        const LoginRoute(),
+        const LoginScreenTabletRoute(),
       ),
     );
   }
@@ -41,17 +41,17 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Image.asset(
               AppPngs.logo,
-              height: 125.h,
-              width: 125.w,
+              height: 232.h,
+              width: 230.w,
             ),
             SizedBox(height: 60.h),
             const Text(
               "NEW ELEMENT",
-              style: AppFonts.w800s38,
+              style: AppFonts.w800s62,
             ),
             const Text(
               "TRAINING",
-              style: AppFonts.w600s34,
+              style: AppFonts.w600s55,
             ),
           ],
         ),
