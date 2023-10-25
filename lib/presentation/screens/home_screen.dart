@@ -1,8 +1,8 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:new_element_training/resources/resources.dart';
-import 'package:new_element_training/router/router.dart';
+import "package:auto_route/auto_route.dart";
+import "package:flutter/material.dart";
+import "package:flutter_svg/svg.dart";
+import "package:new_element_training/resources/resources.dart";
+import "package:new_element_training/router/router.dart";
 
 @RoutePage()
 class HomeScreen extends StatefulWidget {

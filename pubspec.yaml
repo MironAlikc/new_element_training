@@ -23,6 +23,7 @@ dependencies:
   table_calendar: ^3.0.9
   auto_route: ^7.8.3
   device_preview: ^1.1.0
+  neon_circular_timer: ^0.0.7
 
 dev_dependencies:
   flutter_test:

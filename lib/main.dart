@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
             child: TextFieldUnfocus(
               child: MaterialApp.router(
                 debugShowCheckedModeBanner: false,
-                title: "Flutter Demo",
+                title: "Flutter Mobile",
                 theme: ThemeData(
                   scaffoldBackgroundColor: Colors.white,
                   // textTheme: GoogleFonts.interTextTheme(),
@@ -66,7 +66,7 @@ class _MyAppState extends State<MyApp> {
             child: TextFieldUnfocus(
               child: MaterialApp.router(
                 debugShowCheckedModeBanner: false,
-                title: "Flutter Demo",
+                title: "Flutter Tablet",
                 theme: ThemeData(
                   scaffoldBackgroundColor: Colors.white,
                   // textTheme: GoogleFonts.interTextTheme(),

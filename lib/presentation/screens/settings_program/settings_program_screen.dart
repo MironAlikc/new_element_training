@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:flutter_svg/svg.dart";
 import "package:new_element_training/presentation/common_widgets/custom_timer_widget.dart";
+import "package:new_element_training/presentation/screens/stopwatch_timer%20/stopwatch_timer_screens.dart";
 import "package:new_element_training/resources/resources.dart";
 
 @RoutePage()
@@ -49,7 +50,13 @@ class SettingsProgramScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CustomTimerWidget(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const StopwatchTimerScreens(),
+                      ),
+                    );
+                  },
                   title: "Timer",
                   image: AppSvgs.timer,
                 ),
