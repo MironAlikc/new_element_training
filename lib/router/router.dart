@@ -1,15 +1,19 @@
 import "package:auto_route/auto_route.dart";
 import "package:new_element_training/presentation/screens/%D1%81ontacts/contacts_screen.dart";
+import "package:new_element_training/presentation/screens/%D1%81ontacts/contacts_screen_tablet.dart";
 import "package:new_element_training/presentation/screens/%D1%81ontacts/create_program_screen.dart";
 import "package:new_element_training/presentation/screens/%D1%81ontacts/program_screen.dart";
 import "package:new_element_training/presentation/screens/%D1%81ontacts/select_training_screens.dart";
 import "package:new_element_training/presentation/screens/calendar/calendar_screen.dart";
+import "package:new_element_training/presentation/screens/calendar/calendar_screen_tablet.dart";
 import "package:new_element_training/presentation/screens/calendar/table_calendar_screen.dart";
 import "package:new_element_training/presentation/screens/home_screen.dart";
+import 'package:new_element_training/presentation/screens/home_screen_tablet.dart';
 import "package:new_element_training/presentation/screens/login_screen.dart";
 import "package:new_element_training/presentation/screens/login_screen_tablet.dart";
 import "package:new_element_training/presentation/screens/settings/change_Info_screen.dart";
 import "package:new_element_training/presentation/screens/settings/settings_screen.dart";
+import "package:new_element_training/presentation/screens/settings/settings_screen_tablet.dart";
 import "package:new_element_training/presentation/screens/settings_program/settings_program_screen.dart";
 import "package:new_element_training/presentation/screens/splash_screen.dart";
 import "package:new_element_training/presentation/screens/splash_screen_tablet.dart";
@@ -85,6 +89,32 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: LoginScreenTabletRoute.page,
           path: "/loginScreenTablet",
+        ),
+        AutoRoute(
+          page: HomeScreenTabletRoute.page,
+          path: "/homeTablet",
+          children: [
+            AutoRoute(
+              page: CalendarTabletRoute.page,
+              path: "calendarTablet",
+            ),
+            AutoRoute(
+              page: ContactsTabletRoute.page,
+              path: "contactsTablet",
+            ),
+            AutoRoute(
+              page: SettingsTabletRoute.page,
+              path: "settingsTablet",
+            ),
+            AutoRoute(
+              page: SplashScreenTabletRoute.page,
+              path: "splashTablet",
+            ),
+            AutoRoute(
+              page: LoginScreenTabletRoute.page,
+              path: "loginTablet",
+            ),
+          ],
         ),
       ];
 }

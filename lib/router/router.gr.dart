@@ -100,6 +100,30 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const LoginScreenTablet(),
       );
     },
+    HomeScreenTabletRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const HomeScreenTablet(),
+      );
+    },
+    CalendarTabletRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CalendarScreenTablet(),
+      );
+    },
+    ContactsTabletRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ContactsScreenTablet(),
+      );
+    },
+    SettingsTabletRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const SettingsScreenTablet(),
+      );
+    },
   };
 }
 
@@ -310,6 +334,62 @@ class LoginScreenTabletRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'LoginScreenTabletRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [HomeScreenTablet]
+class HomeScreenTabletRoute extends PageRouteInfo<void> {
+  const HomeScreenTabletRoute({List<PageRouteInfo>? children})
+      : super(
+          HomeScreenTabletRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeScreenTablet';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CalendarScreenTablet]
+class CalendarTabletRoute extends PageRouteInfo<void> {
+  const CalendarTabletRoute({List<PageRouteInfo>? children})
+      : super(
+          CalendarTabletRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CalendarTabletRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ContactsScreenTablet]
+class ContactsTabletRoute extends PageRouteInfo<void> {
+  const ContactsTabletRoute({List<PageRouteInfo>? children})
+      : super(
+          ContactsTabletRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ContactsTabletRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SettingsScreenTablet]
+class SettingsTabletRoute extends PageRouteInfo<void> {
+  const SettingsTabletRoute({List<PageRouteInfo>? children})
+      : super(
+          SettingsTabletRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SettingsTabletRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -1,4 +1,4 @@
-part of 'auth_bloc.dart';
+part of "auth_bloc.dart";
 
 abstract class AuthEvent {}
 
@@ -10,4 +10,3 @@ class GetTokenEvent extends AuthEvent {
   String login;
   String password;
 }
-

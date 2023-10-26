@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
+import "package:flutter_svg/svg.dart";
 
 class SettingsCamersWidget extends StatelessWidget {
   const SettingsCamersWidget({
-    super.key,
     required this.image,
     required this.title,
+    super.key,
     this.onPressed,
   });
 
@@ -33,11 +33,11 @@ class SettingsCamersWidget extends StatelessWidget {
               style: const TextStyle(
                 color: Colors.black,
                 fontSize: 18,
-                fontFamily: 'Inter',
+                fontFamily: "Inter",
                 fontWeight: FontWeight.w700,
               ),
             ),
-          )
+          ),
         ],
       ),
     );

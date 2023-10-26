@@ -44,10 +44,6 @@ class _CreateProgramScreenState extends State<CreateProgramScreen> {
     "H1",
     "H2",
     "J1",
-    "J2",
-    "J3",
-    "J4",
-    "J5",
   ];
   List<String> selectedLetters = [];
   @override

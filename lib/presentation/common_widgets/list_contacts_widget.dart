@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:new_element_training/resources/resources.dart';
+import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
+import "package:new_element_training/resources/resources.dart";
 
 class ListContactsWidget extends StatelessWidget {
-  const ListContactsWidget({super.key, required this.onTap});
+  const ListContactsWidget({required this.onTap, super.key});
   final Function() onTap;
   @override
   Widget build(BuildContext context) {
@@ -30,18 +30,18 @@ class ListContactsWidget extends StatelessWidget {
                     color: Color(0x26000000),
                     blurRadius: 4,
                     offset: Offset(0, 4),
-                    spreadRadius: 0,
-                  )
+                  ),
                 ],
               ),
               child: Row(
                 children: [
                   CircleAvatar(
-                      radius: 37.r,
-                      backgroundColor: Colors.white,
-                      backgroundImage: const AssetImage(
-                        AppPngs.user,
-                      )),
+                    radius: 37.r,
+                    backgroundColor: Colors.white,
+                    backgroundImage: const AssetImage(
+                      AppPngs.user,
+                    ),
+                  ),
                   SizedBox(width: 18.w),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,30 +60,30 @@ class ListContactsWidget extends StatelessWidget {
                       Row(
                         children: [
                           const Text(
-                            'Weight 200tb ',
+                            "Weight 200tb ",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Color(0xFFA3A3A3),
                               fontSize: 16,
-                              fontFamily: 'Inter',
+                              fontFamily: "Inter",
                               fontWeight: FontWeight.w400,
                               height: 0,
                             ),
                           ),
                           SizedBox(width: 18.w),
                           const Text(
-                            'Height 6,3',
+                            "Height 6,3",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Color(0xFFA3A3A3),
                               fontSize: 16,
-                              fontFamily: 'Inter',
+                              fontFamily: "Inter",
                               fontWeight: FontWeight.w400,
                               height: 0,
                             ),
                           ),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ],
