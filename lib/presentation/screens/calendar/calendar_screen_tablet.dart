@@ -2,7 +2,6 @@ import "package:auto_route/auto_route.dart";
 import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:flutter_svg/svg.dart";
-import "package:new_element_training/presentation/common_widgets/list_user_calendar_widget.dart";
 import "package:new_element_training/resources/resources.dart";
 import "package:new_element_training/router/router.dart";
 
@@ -21,25 +20,27 @@ class _CalendarScreenTabletState extends State<CalendarScreenTablet> {
   Widget build(BuildContext context) {
     final TextEditingController controller = TextEditingController();
     return Scaffold(
+      backgroundColor: Colors.redAccent,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.h),
           child: Stack(
             children: [
-              ListView.builder(
-                padding: EdgeInsets.only(top: 50.h),
-                keyboardDismissBehavior:
-                    ScrollViewKeyboardDismissBehavior.onDrag,
-                shrinkWrap: true,
-                itemCount: 10,
-                itemBuilder: (context, index) => ListViewUserCalendarWidget(
-                  onTap: () {
-                    // AutoRouter.of(context).push(
-                    //   const ProgramRoute(),
-                    // );
-                  },
-                ),
-              ),
+              // ListView.builder(
+              //   padding: EdgeInsets.only(top: 50.h),
+              //   keyboardDismissBehavior:
+              //       ScrollViewKeyboardDismissBehavior.onDrag,
+              //   shrinkWrap: true,
+              //   itemCount: 10,
+              //   itemBuilder: (context, index) =>
+              //       ListViewUserCalendarTabletWidget(
+              //     onTap: () {
+              //       // AutoRouter.of(context).push(
+              //       //   const ProgramRoute(),
+              //       // );
+              //     },
+              //   ),
+              // ),
               TextField(
                 decoration: InputDecoration(
                   suffixIcon: IconButton(

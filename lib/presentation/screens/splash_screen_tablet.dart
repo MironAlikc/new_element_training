@@ -6,7 +6,7 @@ import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:new_element_training/presentation/themes/app_colors.dart";
 import "package:new_element_training/presentation/themes/app_fonts.dart";
 import "package:new_element_training/resources/resources.dart";
-import "package:new_element_training/router/router.dart";
+import "package:new_element_training/router/tablet_router.dart";
 
 @RoutePage()
 class SplashScreenTablet extends StatefulWidget {
@@ -22,8 +22,10 @@ class _SplashScreenTabletState extends State<SplashScreenTablet> {
     super.initState();
     Timer(
       const Duration(seconds: 2),
-      () => AutoRouter.of(context).push(
-        const LoginScreenTabletRoute(),
+      () => unawaited(
+        AutoRouter.of(context).push(
+          const LoginTabletRoute(),
+        ),
       ),
     );
   }
