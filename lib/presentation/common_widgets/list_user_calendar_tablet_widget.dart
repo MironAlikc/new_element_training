@@ -2,8 +2,11 @@ import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:new_element_training/resources/resources.dart";
 
-class ListContactsWidget extends StatelessWidget {
-  const ListContactsWidget({required this.onTap, super.key});
+class ListViewUserCalendarTabletWidget extends StatelessWidget {
+  const ListViewUserCalendarTabletWidget({
+    required this.onTap,
+    super.key,
+  });
   final Function() onTap;
   @override
   Widget build(BuildContext context) {
@@ -39,7 +42,7 @@ class ListContactsWidget extends StatelessWidget {
                     radius: 37.r,
                     backgroundColor: Colors.white,
                     backgroundImage: const AssetImage(
-                      AppPngs.user,
+                      AppPngs.imageUser,
                     ),
                   ),
                   SizedBox(width: 18.w),
@@ -47,7 +50,19 @@ class ListContactsWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Aleksander",
+                        "9.30 AM",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xFFA3A3A3),
+                          fontSize: 16,
+                          fontFamily: "Inter",
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                      SizedBox(height: 10.h),
+                      const Text(
+                        "Anna Brown",
                         style: TextStyle(
                           color: Color(0xFF1E1E1E),
                           fontSize: 18,
@@ -57,33 +72,6 @@ class ListContactsWidget extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 10.h),
-                      Row(
-                        children: [
-                          const Text(
-                            "Weight 200tb ",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Color(0xFFA3A3A3),
-                              fontSize: 16,
-                              fontFamily: "Inter",
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                            ),
-                          ),
-                          SizedBox(width: 18.w),
-                          const Text(
-                            "Height 6,3",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Color(0xFFA3A3A3),
-                              fontSize: 16,
-                              fontFamily: "Inter",
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                            ),
-                          ),
-                        ],
-                      ),
                     ],
                   ),
                 ],

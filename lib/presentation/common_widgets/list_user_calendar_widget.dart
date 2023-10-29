@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:new_element_training/resources/resources.dart';
+import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
+import "package:new_element_training/resources/resources.dart";
 
 class ListViewUserCalendarWidget extends StatelessWidget {
   const ListViewUserCalendarWidget({
-    super.key,
     required this.onTap,
+    super.key,
   });
   final Function() onTap;
   @override
@@ -33,29 +33,29 @@ class ListViewUserCalendarWidget extends StatelessWidget {
                     color: Color(0x26000000),
                     blurRadius: 4,
                     offset: Offset(0, 4),
-                    spreadRadius: 0,
-                  )
+                  ),
                 ],
               ),
               child: Row(
                 children: [
                   CircleAvatar(
-                      radius: 37.r,
-                      backgroundColor: Colors.white,
-                      backgroundImage: const AssetImage(
-                        AppPngs.imageUser,
-                      )),
+                    radius: 37.r,
+                    backgroundColor: Colors.white,
+                    backgroundImage: const AssetImage(
+                      AppPngs.imageUser,
+                    ),
+                  ),
                   SizedBox(width: 18.w),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        '9.30 AM',
+                        "9.30 AM",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFFA3A3A3),
                           fontSize: 16,
-                          fontFamily: 'Inter',
+                          fontFamily: "Inter",
                           fontWeight: FontWeight.w400,
                           height: 0,
                         ),

@@ -1,9 +1,9 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:new_element_training/resources/resources.dart';
-import 'package:new_element_training/router/router.dart';
+import "package:auto_route/auto_route.dart";
+import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
+import "package:flutter_svg/svg.dart";
+import "package:new_element_training/resources/resources.dart";
+import "package:new_element_training/router/router.dart";
 
 @RoutePage()
 class SelectTrainingScreen extends StatelessWidget {
@@ -32,11 +32,11 @@ class SelectTrainingScreen extends StatelessWidget {
           TextButton(
             onPressed: () {},
             child: const Text(
-              'Archieve',
+              "Archieve",
               style: TextStyle(
                 color: Color(0xFFFF5447),
                 fontSize: 18,
-                fontFamily: 'Inter',
+                fontFamily: "Inter",
                 fontWeight: FontWeight.w700,
                 height: 0,
               ),
@@ -53,7 +53,7 @@ class SelectTrainingScreen extends StatelessWidget {
               style: TextStyle(
                 color: Color(0xFF1E1E1E),
                 fontSize: 24,
-                fontFamily: 'Inter',
+                fontFamily: "Inter",
                 fontWeight: FontWeight.w800,
                 height: 0,
               ),

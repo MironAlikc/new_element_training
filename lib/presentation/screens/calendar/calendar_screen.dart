@@ -1,10 +1,10 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:new_element_training/presentation/common_widgets/list_user_calendar_widget.dart';
-import 'package:new_element_training/resources/resources.dart';
-import 'package:new_element_training/router/router.dart';
+import "package:auto_route/auto_route.dart";
+import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
+import "package:flutter_svg/svg.dart";
+import "package:new_element_training/presentation/common_widgets/list_user_calendar_widget.dart";
+import "package:new_element_training/resources/resources.dart";
+import "package:new_element_training/router/router.dart";
 
 @RoutePage()
 class CalendarScreen extends StatefulWidget {
@@ -21,6 +21,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
   Widget build(BuildContext context) {
     final TextEditingController controller = TextEditingController();
     return Scaffold(
+      backgroundColor: Colors.amber,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.h),
@@ -52,7 +53,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                   hintStyle: const TextStyle(
                     color: Color(0xFFA3A3A3),
                     fontSize: 18,
-                    fontFamily: 'Inter',
+                    fontFamily: "Inter",
                     fontWeight: FontWeight.w400,
                     height: 0,
                   ),
@@ -127,7 +128,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     //             controller: controller,
     //           ),
     //           SizedBox(height: 12.h),
-    //           const ListViewUserCalendarWidget(),
+    //           const (),
     //         ],
     //       ),
     //     ),

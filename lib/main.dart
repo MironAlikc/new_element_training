@@ -5,6 +5,7 @@ import "package:new_element_training/bloc/auth_bloc.dart";
 import "package:new_element_training/core/dio_settings/dio_settings.dart";
 import "package:new_element_training/data/repositories/auth_repositories.dart";
 import "package:new_element_training/router/router.dart";
+import "package:new_element_training/router/tablet_router.dart";
 import "package:responsive_builder/responsive_builder.dart";
 
 void main() async {
@@ -21,6 +22,8 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final _router = AppRouter();
+  final _routerTablet = TabletRouter();
+
   @override
   Widget build(BuildContext context) {
     return MultiRepositoryProvider(
@@ -50,7 +53,7 @@ class _MyAppState extends State<MyApp> {
             child: TextFieldUnfocus(
               child: MaterialApp.router(
                 debugShowCheckedModeBanner: false,
-                title: "Flutter Demo",
+                title: "Flutter Mobile",
                 theme: ThemeData(
                   scaffoldBackgroundColor: Colors.white,
                   // textTheme: GoogleFonts.interTextTheme(),
@@ -66,12 +69,12 @@ class _MyAppState extends State<MyApp> {
             child: TextFieldUnfocus(
               child: MaterialApp.router(
                 debugShowCheckedModeBanner: false,
-                title: "Flutter Demo",
+                title: "Flutter Tablet",
                 theme: ThemeData(
                   scaffoldBackgroundColor: Colors.white,
                   // textTheme: GoogleFonts.interTextTheme(),
                 ),
-                routerConfig: _router.config(),
+                routerConfig: _routerTablet.config(),
               ),
             ),
           ),

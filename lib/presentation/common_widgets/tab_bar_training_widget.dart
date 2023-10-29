@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 
 class TabBarTrainingWidget extends StatefulWidget {
   const TabBarTrainingWidget({super.key});
@@ -9,8 +9,8 @@ class TabBarTrainingWidget extends StatefulWidget {
 
 class _TabBarTrainingWidgetState extends State<TabBarTrainingWidget> {
   List<Widget> tabItems = [
-    const Text('Program A'),
-    const Text('Program B'),
+    const Text("Program A"),
+    const Text("Program B"),
   ];
   int currentTabIndex = 0;
   @override
@@ -34,10 +34,10 @@ class _TabBarTrainingWidgetState extends State<TabBarTrainingWidget> {
               Tab(
                 height: 50,
                 child: Text(
-                  'Current Program',
+                  "Current Program",
                   style: TextStyle(
                     fontSize: 24,
-                    fontFamily: 'Inter',
+                    fontFamily: "Inter",
                     fontWeight: FontWeight.w700,
                     height: 0,
                   ),
@@ -46,10 +46,10 @@ class _TabBarTrainingWidgetState extends State<TabBarTrainingWidget> {
               Tab(
                 height: 50,
                 child: Text(
-                  'Archieve',
+                  "Archieve",
                   style: TextStyle(
                     fontSize: 24,
-                    fontFamily: 'Inter',
+                    fontFamily: "Inter",
                     fontWeight: FontWeight.w500,
                     height: 0,
                   ),

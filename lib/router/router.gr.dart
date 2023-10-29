@@ -21,6 +21,7 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const CalendarScreen(),
       );
     },
+  
     ChangeInfoRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -33,6 +34,7 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const ContactsScreen(),
       );
     },
+    
     CreateProgramRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -45,12 +47,14 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const HomeScreen(),
       );
     },
+   
     LoginRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const LoginScreen(),
       );
     },
+ 
     ProgramRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -64,40 +68,30 @@ abstract class _$AppRouter extends RootStackRouter {
         child: SelectTrainingScreen(selectedTrainers: args.selectedTrainers),
       );
     },
-    SettingsRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const SettingsScreen(),
-      );
-    },
-    SplashRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const SplashScreen(),
-      );
-    },
-    TableCalendarRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const TableCalendarScreen(),
-      );
-    },
     SettingsProgramRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const SettingsProgramScreen(),
       );
     },
-    SplashScreenTabletRoute.name: (routeData) {
+    SettingsRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const SplashScreenTablet(),
+        child: const SettingsScreen(),
       );
     },
-    LoginScreenTabletRoute.name: (routeData) {
+   
+    SplashRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const LoginScreenTablet(),
+        child: const SplashScreen(),
+      );
+    },
+ 
+    TableCalendarRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const TableCalendarScreen(),
       );
     },
   };
@@ -116,6 +110,8 @@ class CalendarRoute extends PageRouteInfo<void> {
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
+
+
 
 /// generated route for
 /// [ChangeInfoScreen]
@@ -144,6 +140,7 @@ class ContactsRoute extends PageRouteInfo<void> {
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
+
 
 /// generated route for
 /// [CreateProgramScreen]
@@ -186,6 +183,8 @@ class LoginRoute extends PageRouteInfo<void> {
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
+
+
 
 /// generated route for
 /// [ProgramScreen]
@@ -231,6 +230,20 @@ class SelectTrainingRouteArgs {
 }
 
 /// generated route for
+/// [SettingsProgramScreen]
+class SettingsProgramRoute extends PageRouteInfo<void> {
+  const SettingsProgramRoute({List<PageRouteInfo>? children})
+      : super(
+          SettingsProgramRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SettingsProgramRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [SettingsScreen]
 class SettingsRoute extends PageRouteInfo<void> {
   const SettingsRoute({List<PageRouteInfo>? children})
@@ -240,6 +253,20 @@ class SettingsRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'SettingsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SettingsScreenTablet]
+class SettingsRouteTablet extends PageRouteInfo<void> {
+  const SettingsRouteTablet({List<PageRouteInfo>? children})
+      : super(
+          SettingsRouteTablet.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SettingsRouteTablet';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -258,6 +285,7 @@ class SplashRoute extends PageRouteInfo<void> {
   static const PageInfo<void> page = PageInfo<void>(name);
 }
 
+
 /// generated route for
 /// [TableCalendarScreen]
 class TableCalendarRoute extends PageRouteInfo<void> {
@@ -268,48 +296,6 @@ class TableCalendarRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'TableCalendarRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [SettingsProgramScreen]
-class SettingsProgramRoute extends PageRouteInfo<void> {
-  const SettingsProgramRoute({List<PageRouteInfo>? children})
-      : super(
-          SettingsProgramRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'SettingsProgramRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [SplashScreenTablet]
-class SplashScreenTabletRoute extends PageRouteInfo<void> {
-  const SplashScreenTabletRoute({List<PageRouteInfo>? children})
-      : super(
-          SplashScreenTabletRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'SplashScreenTabletRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [LoginScreenTablet]
-class LoginScreenTabletRoute extends PageRouteInfo<void> {
-  const LoginScreenTabletRoute({List<PageRouteInfo>? children})
-      : super(
-          LoginScreenTabletRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'LoginScreenTabletRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -1,7 +1,7 @@
-import 'package:dio/dio.dart';
-import 'package:new_element_training/core/const/const.dart';
-import 'package:new_element_training/data/models/token_model.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import "package:dio/dio.dart";
+import "package:new_element_training/core/const/const.dart";
+import "package:new_element_training/data/models/token_model.dart";
+import "package:shared_preferences/shared_preferences.dart";
 
 class AuthRepositories {
   AuthRepositories({required this.dio});

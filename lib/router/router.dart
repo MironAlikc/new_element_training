@@ -7,12 +7,11 @@ import "package:new_element_training/presentation/screens/calendar/calendar_scre
 import "package:new_element_training/presentation/screens/calendar/table_calendar_screen.dart";
 import "package:new_element_training/presentation/screens/home_screen.dart";
 import "package:new_element_training/presentation/screens/login_screen.dart";
-import "package:new_element_training/presentation/screens/login_screen_tablet.dart";
 import "package:new_element_training/presentation/screens/settings/change_Info_screen.dart";
 import "package:new_element_training/presentation/screens/settings/settings_screen.dart";
+import "package:new_element_training/presentation/screens/settings/settings_screen_tablet.dart";
 import "package:new_element_training/presentation/screens/settings_program/settings_program_screen.dart";
 import "package:new_element_training/presentation/screens/splash_screen.dart";
-import "package:new_element_training/presentation/screens/splash_screen_tablet.dart";
 
 part "router.gr.dart";
 
@@ -44,14 +43,6 @@ class AppRouter extends _$AppRouter {
               page: SettingsRoute.page,
               path: "settings",
             ),
-            AutoRoute(
-              page: SplashScreenTabletRoute.page,
-              path: "splashTablet",
-            ),
-            AutoRoute(
-              page: LoginScreenTabletRoute.page,
-              path: "loginTablet",
-            ),
           ],
         ),
         AutoRoute(
@@ -77,14 +68,6 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: SettingsProgramRoute.page,
           path: "/settingsProgram",
-        ),
-        AutoRoute(
-          page: SplashScreenTabletRoute.page,
-          path: "/splashScreenTablet",
-        ),
-        AutoRoute(
-          page: LoginScreenTabletRoute.page,
-          path: "/loginScreenTablet",
         ),
       ];
 }

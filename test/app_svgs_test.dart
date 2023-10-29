@@ -1,10 +1,10 @@
-import 'dart:io';
+import "dart:io";
 
-import 'package:flutter_test/flutter_test.dart';
-import 'package:new_element_training/resources/resources.dart';
+import "package:flutter_test/flutter_test.dart";
+import "package:new_element_training/resources/resources.dart";
 
 void main() {
-  test('app_svgs assets test', () {
+  test("app_svgs assets test", () {
     expect(File(AppSvgs.back).existsSync(), isTrue);
     expect(File(AppSvgs.backArrow).existsSync(), isTrue);
     expect(File(AppSvgs.calendar).existsSync(), isTrue);

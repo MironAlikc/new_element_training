@@ -2,17 +2,17 @@ import "package:auto_route/auto_route.dart";
 import "package:flutter/material.dart";
 import "package:flutter_svg/svg.dart";
 import "package:new_element_training/resources/resources.dart";
-import "package:new_element_training/router/router.dart";
+import "package:new_element_training/router/tablet_router.dart";
 
 @RoutePage()
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class HomeScreenTablet extends StatefulWidget {
+  const HomeScreenTablet({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomeScreenTablet> createState() => _HomeScreenTabletState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenTabletState extends State<HomeScreenTablet> {
   var _selectedPageIndex = 0;
   final Color _inactiveColor = const Color(0xFF1E1E1E);
   final Color _activeColor = const Color(0xFF587DBD);
@@ -21,9 +21,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return AutoTabsRouter(
       routes: const [
-        CalendarRoute(),
-        ContactsRoute(),
-        SettingsRoute(),
+        CalendarTabletRoute(),
+        ContactsTabletRoute(),
+        SettingsTabletRoute(),
       ],
       builder: (context, child) {
         final tabRouter = AutoTabsRouter.of(context);
