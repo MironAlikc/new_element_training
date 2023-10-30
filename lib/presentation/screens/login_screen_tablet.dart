@@ -69,6 +69,7 @@ class _LoginScreenTabletState extends State<LoginScreenTablet> {
               },
               child: CustomButtonWidget(
                 onPressed: () {
+                  //AutoRouter.of(context).push(const SettingsTabletRoute());
                   BlocProvider.of<AuthBloc>(context).add(
                     GetTokenEvent(
                       login: controlerEmail.text,
@@ -79,6 +80,7 @@ class _LoginScreenTabletState extends State<LoginScreenTablet> {
                 title: "Log In",
               ),
             ),
+            SizedBox(height: 112.h),
           ],
         ),
       ),

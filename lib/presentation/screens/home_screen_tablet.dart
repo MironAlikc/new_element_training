@@ -42,24 +42,30 @@ class _HomeScreenTabletState extends State<HomeScreenTablet> {
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   AppSvgs.calendar,
-                  color:
-                      _selectedPageIndex == 0 ? _activeColor : _inactiveColor,
+                  colorFilter: ColorFilter.mode(
+                    _selectedPageIndex == 0 ? _activeColor : _inactiveColor,
+                    BlendMode.srcIn,
+                  ),
                 ),
                 label: "Calendar",
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   AppSvgs.contacts,
-                  color:
-                      _selectedPageIndex == 1 ? _activeColor : _inactiveColor,
+                  colorFilter: ColorFilter.mode(
+                    _selectedPageIndex == 1 ? _activeColor : _inactiveColor,
+                    BlendMode.srcIn,
+                  ),
                 ),
                 label: "Contacts",
-              ),
+              ), 
               BottomNavigationBarItem(
-                icon: SvgPicture.asset(
+                icon: SvgPicture.asset(   
                   AppSvgs.settings,
-                  color:
-                      _selectedPageIndex == 2 ? _activeColor : _inactiveColor,
+                  colorFilter: ColorFilter.mode(
+                    _selectedPageIndex == 2 ? _activeColor : _inactiveColor,
+                    BlendMode.srcIn,
+                  ),
                 ),
                 label: "Settings",
               ),

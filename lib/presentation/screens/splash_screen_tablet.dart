@@ -22,10 +22,8 @@ class _SplashScreenTabletState extends State<SplashScreenTablet> {
     super.initState();
     Timer(
       const Duration(seconds: 2),
-      () => unawaited(
-        AutoRouter.of(context).push(
-          const LoginTabletRoute(),
-        ),
+      () => AutoRouter.of(context).push(
+        const LoginTabletRoute(),
       ),
     );
   }
