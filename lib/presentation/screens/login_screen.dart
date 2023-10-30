@@ -80,12 +80,14 @@ class _LoginScreenState extends State<LoginScreen> {
               },
               child: CustomButtonWidget(
                 onPressed: () {
+                  print("1234");
                   BlocProvider.of<AuthBloc>(context).add(
                     GetTokenEvent(
                       login: controlerEmail.text,
                       password: controlerPassword.text,
                     ),
                   );
+                  print("1234");
                 },
                 title: "Log In",
               ),

@@ -33,6 +33,7 @@ abstract class _$TabletRouter extends RootStackRouter {
         child: const HomeScreenTablet(),
       );
     },
+
     CalendarTabletRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,

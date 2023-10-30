@@ -21,7 +21,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
   Widget build(BuildContext context) {
     final TextEditingController controller = TextEditingController();
     return Scaffold(
-      backgroundColor: Colors.amber,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.h),
