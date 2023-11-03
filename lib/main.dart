@@ -74,7 +74,7 @@ class _MyAppState extends State<MyApp> {
                   scaffoldBackgroundColor: Colors.white,
                   // textTheme: GoogleFonts.interTextTheme(),
                 ),
-                routerConfig: _router.config(),
+                routerConfig: _routerTablet.config(),
               ),
             ),
           ),
